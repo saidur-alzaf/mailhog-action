@@ -60,7 +60,5 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(":: Email sent successfully! ::")
+	fmt.Println("::Email sent successfully::")
 }
-
-// test
