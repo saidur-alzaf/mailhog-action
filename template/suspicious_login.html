@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suspicious Login Attempt</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f8fafc;
+        color: #111827;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .wrapper {
+        width: 100%;
+        padding: 24px 16px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+        padding: 32px;
+        color: #ffffff;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      .body {
+        padding: 32px;
+      }
+      .body h2 {
+        margin: 0 0 16px;
+        font-size: 22px;
+        color: #111827;
+      }
+      .body p {
+        margin: 0 0 18px;
+        line-height: 1.75;
+        color: #4b5563;
+        font-size: 16px;
+      }
+      .details {
+        padding: 20px;
+        background: #fef2f2;
+        border: 1px solid #fee2e2;
+        border-radius: 16px;
+        margin: 20px 0;
+      }
+      .details p {
+        margin: 0 0 10px;
+      }
+      .button {
+        display: inline-block;
+        background: #b91c1c;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+      }
+      .footer {
+        padding: 24px 32px 32px;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 14px;
+      }
+      .footer p {
+        margin: 0;
+      }
+      @media (max-width: 520px) {
+        .body,
+        .footer,
+        .header {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="header">
+          <h1>Suspicious sign-in detected</h1>
+        </div>
+        <div class="body">
+          <h2>We noticed an unusual login attempt</h2>
+          <p>
+            Someone tried to access your account from a new device or location.
+            Review the details below and secure your account if this was not
+            you.
+          </p>
+          <div class="details">
+            <p><strong>Time:</strong> 3:52 AM UTC</p>
+            <p><strong>Location:</strong> Berlin, Germany</p>
+            <p><strong>Device:</strong> Firefox on Windows</p>
+          </div>
+          <a href="https://example.com/security" class="button"
+            >Review activity</a
+          >
+        </div>
+        <div class="footer">
+          <p>Example Company • Security alert</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

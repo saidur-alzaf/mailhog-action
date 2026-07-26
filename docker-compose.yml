@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mailhog
+    environment:
+      - SMTP_HOST=mailhog
+      - SMTP_PORT=1025
+      - SMTP_FROM=noreply@example.com
+      - SMTP_TO=customer@example.com
+    command: ["reset-password"]
