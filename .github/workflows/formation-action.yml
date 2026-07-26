@@ -1,0 +1,26 @@
+name: Format Check Action
+run-name: ${{ github.actor }} is running the format check action
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  go-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: Make format check script executable
+        run: chmod +x scripts/check-format.sh
+
+      - name: Run format check
+        run: ./scripts/check-format.sh
