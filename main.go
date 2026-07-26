@@ -16,7 +16,7 @@ func envOrDefault(key, def string) string {
 }
 
 func main() {
-	templateFile := "template/professional.html"
+	templateFile := "template/otp_verify.html"
 	subject := "Example Company Account Update"
 
 	if len(os.Args) > 1 {
