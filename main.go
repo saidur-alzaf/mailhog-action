@@ -21,12 +21,6 @@ func main() {
 
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
-		case "announcement":
-			templateFile = "template/announcement.html"
-			subject = "Example Company Feature Launch"
-		case "reset-password":
-			templateFile = "template/reset_password.html"
-			subject = "Reset your Example Company password"
 		case "otp-verify":
 			templateFile = "template/otp_verify.html"
 			subject = "Your Example Company verification code"
