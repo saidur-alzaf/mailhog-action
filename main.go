@@ -45,8 +45,8 @@ func main() {
 	if err != nil {
 		panic(fmt.Errorf("invalid SMTP_PORT: %w", err))
 	}
-	smtpUser := os.Getenv("SMTP_USERNAME")
-	smtpPass := os.Getenv("SMTP_PASSWORD")
+	smtpUser := os.Getenv("SMTP_USERNAME") // optional, can be empty!
+	smtpPass := os.Getenv("SMTP_PASSWORD") // optional, can be empty!
 
 	m := gomail.NewMessage()
 	m.SetHeader("From", sender)
